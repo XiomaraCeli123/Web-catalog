@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global Styles */
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+button.normal {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+
+button.white {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 18px;
+  color: black;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid black;
+  outline: none;
+  transition: 0.2s;
+}
+
+body {
+  width: 100%;
+  height: 100vh; /* Asegura que el fondo cubra toda la ventana */
+  background-image: url('https://estaticos-cdn.sport.es/clip/f1dd1a06-5486-4351-91e2-d771b41fdcd4_source-aspect-ratio_default_0.jpg'); /* Imagen de fondo */
+  background-size: cover; /* Cubre todo el fondo */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* No repite la imagen */
+  animation: backgroundAnimation 3s ease-in-out infinite alternate; /* Animación de fondo */
+  margin: 0; /* Elimina el margen que podría estar cubriendo el fondo */
+}
+
+/* Animación para el fondo */
+@keyframes backgroundAnimation {
+  0% {
+    background-position: center top;
+  }
+  100% {
+    background-position: center bottom;
+  }
+}
+
+/* Comienzo del encabezado */
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: transparent; /* Transparente para que se vea el fondo */
+  box-shadow: none; /* Sin sombra */
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+  animation: fadeIn 1s; /* Añadido efecto de animación */
+}
+
+/* Ajustes del navbar */
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: #088178;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #088178;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+/* Página de inicio */
+#hero {
+  height: 80vh;
+  width: 100%;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Eliminación del fondo blanco de la sección de categorías */
+#categories {
+  background: transparent; /* Fondo transparente */
+}
+
+#hero h4 {
+  padding-bottom: 15px;
+}
+
+#hero h2 {
+  color: #088178;
+}
+
+/* Estilo de botón en la sección de héroe */
+#hero button {
+  background-image: url("https://github.com/tech2etc/Build-and-Deploy-Ecommerce-Website/blob/main/img/button.png?raw=true");
+  background-color: transparent;
+  color: #088178;
+  border: 0;
+  padding: 14px 80px 14px 65px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Efecto de animación en el título */
+#hero h2 {
+  animation: slideIn 1s ease forwards;
+}
+
+/* Efecto de animación en botones */
+#hero button {
+  animation: slideIn 1s ease forwards;
+}

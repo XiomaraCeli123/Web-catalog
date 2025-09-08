@@ -1,0 +1,261 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://static.vecteezy.com/system/resources/previews/016/413/124/non_2x/horizontal-tropical-leaves-banners-on-white-background-with-copy-space-exotic-botanical-design-for-cosmetics-spa-perfume-health-care-products-aroma-wedding-invitation-free-vector.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: backgroundAnimation 3s ease-in-out infinite alternate;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  overflow-x: hidden;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+      background-position: center;
+  }
+  50% {
+      background-position: left;
+  }
+  100% {
+      background-position: right;
+  }
+}
+
+/* Animaciones de texto */
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(-30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Estilos de sección */
+.section-p1 {
+  padding: 40px 20px;
+  width: 100%;
+}
+
+/* Banner principal */
+#main-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 60px 20px;
+  background-color: rgba(248, 248, 248, 0.5); /* Cambio la opacidad a 0.5 para hacerlo semi-transparente */
+  border-radius: 12px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.banner-text h1 {
+  font-size: 2.5rem;
+  color: #088178;
+  margin-bottom: 10px;
+  animation: fadeInLeft 1s ease-out;
+}
+
+.banner-text p {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 20px;
+  animation: fadeInLeft 1s ease-out;
+}
+
+.button {
+  background-image: url("https://github.com/tech2etc/Build-and-Deploy-Ecommerce-Website/blob/main/img/button.png?raw=true");
+  background-color: transparent;
+  color: #088178;
+  border: 0;
+  padding: 14px 80px 14px 65px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Sección de ofertas destacadas */
+#featured-banners {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.banner-box {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.banner-box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.banner-content {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.banner-box:hover {
+  transform: scale(1.05);
+}
+
+/* Sección de Productos */
+#productos {
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+#productos h2 {
+  margin-bottom: 40px;
+  color: #088178;
+  font-size: 2rem;
+  animation: fadeInLeft 1s ease-out;
+}
+
+.products {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  border-radius: 10px;
+  width: 280px;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease-out;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  font-size: 1.1rem;
+  color: #088178;
+  margin-bottom: 10px;
+}
+
+.product-card p {
+  color: #777;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+	  display: flex;
+	  justify-content: space-between;
+	  flex-wrap: wrap;
+	  background-color: rgba(0, 0, 0, 0); /* Fondo completamente transparente */
+	  padding: 30px 20px;
+	  border-top: 5px solid #088178;
+	  animation: fadeInUp 1s ease-out;
+	}
+}
+
+
+footer .col {
+  flex: 1;
+  margin-right: 20px;
+}
+
+footer .col img.logo {
+  margin-bottom: 20px;
+}
+
+footer .col h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+footer .col p {
+  margin-bottom: 10px;
+}
+
+footer .social-icons a {
+  color: #088178;
+  background-color: rgba(248, 248, 248, 0.5); /* Cambio la opacidad a 0.5 para hacerlo semi-transparente */
+  margin-right: 10px;
+  font-size: 1.5rem;
+  animation: fadeInLeft 1s ease-out;
+}
+
+footer .footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .section-p1 {
+      padding: 20px 10px;
+  }
+
+  .banner-text h1 {
+      font-size: 2rem;
+  }
+
+  .banner-text p {
+      font-size: 1rem;
+  }
+
+  .button {
+      padding: 10px 60px 10px 50px;
+  }
+
+  .products {
+      flex-direction: column;
+  }
+}

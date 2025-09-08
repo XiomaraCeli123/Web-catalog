@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Spartan", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-size: 46px;
+    line-height: 58px;
+    color: #088178;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 30%;
+    height: 3px;
+    background-color: #088178;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+/* Botón Crear Producto */
+.btn-create-product {
+    background-image: url("https://github.com/tech2etc/Build-and-Deploy-Ecommerce-Website/blob/main/img/button.png?raw=true");
+    background-color: transparent;
+    color: #088178;
+    border: 0;
+    padding: 16px 85px 16px 70px;  /* Aumenté ligeramente el padding para que sea un poco más grueso */
+    background-repeat: no-repeat;
+    cursor: pointer;
+    animation: buttonAnimation 0.5s ease-in-out;
+    font-weight: 600;  /* Puedes aumentar el grosor del texto ajustando el font-weight */
+}
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://img.freepik.com/fotos-premium/botella-vidrio-perfume-esencia-verde-aislada-sobre-fondo-blanco-hojas-frescas-te-verde_292610-1033.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: backgroundAnimation 3s ease-in-out infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: center top;
+    }
+    100% {
+        background-position: center bottom;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes buttonAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: transparent;
+    box-shadow: none;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+    animation: fadeIn 1s;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: #088178;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#hero {
+    height: 80vh;
+    width: 100%;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#categories {
+    background: transparent;
+}
+
+#hero h4 {
+    padding-bottom: 15px;
+}
+
+#hero h2 {
+    color: #088178;
+}
+
+#hero button {
+    background-image: url("https://github.com/tech2etc/Build-and-Deploy-Ecommerce-Website/blob/main/img/button.png?raw=true");
+    background-color: transparent;
+    color: #088178;
+    border: 0;
+    padding: 14px 80px 14px 65px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    animation: buttonAnimation 0.5s ease-in-out;
+}
+
+#lista-perfumes {
+    color: #088178;
+}
+
+.btn-primary {
+    background-color: #088178;
+    border-color: #088178;
+    color: white;
+}
+
+.btn-primary + table {
+    margin-top: 20px;
+}
+
+/* Estilo para el contenedor de los botones (para alinearlos horizontalmente) */
+.accion {
+    display: flex; /* Alinea los botones en una fila */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+/* Estilo para el contenedor de los botones (alineados horizontalmente y centrados) */
+.accion {
+    display: flex; /* Alinea los botones en una fila */
+    justify-content: center; /* Centra los botones horizontalmente */
+    align-items: center; /* Centra los botones verticalmente */
+    gap: 10px; /* Espacio entre los botones */
+    margin-top: 30px; /* Mueve los botones un poco más abajo */
+}
+
+/* Estilo para los botones dentro de la columna "Acción" */
+.accion .btn {
+    background-color: transparent;  /* Eliminar el fondo de los botones */
+    border: 2px solid #088178; /* Borde de color #088178 */
+    color: #088178;  /* Color del texto e íconos */
+    padding: 6px 12px;  /* Reducir el tamaño de los botones */
+    font-size: 12px;     /* Reducir el tamaño de la fuente */
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Estilo para los íconos (emojis) dentro de los botones */
+.accion .btn i {
+    color: #088178;  /* Cambiar color de los íconos a #088178 */
+    font-size: 14px; /* Reducir tamaño de los íconos */
+}
+
+/* Hover sobre los botones */
+.accion .btn:hover {
+    transform: scale(1.1);  /* Aumentar el tamaño del botón al pasar el mouse */
+    background-color: #088178; /* Rellenar el fondo del botón con color */
+    color: white; /* Cambiar el color del texto e íconos a blanco */
+    border-color: #088178; /* Borde del mismo color en hover */
+}
+
+/* Hover específico para los íconos */
+.accion .btn:hover i {
+    color: white;  /* Cambiar el color de los íconos a blanco */
+}
+
+
+/* Estilos para la tabla */
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+    table-layout: fixed;
+    width: 100%;
+    background-color: #f9f9f9;
+    color: #1a1a1a;
+    animation: fadeInTable 1s ease-out forwards;
+    border-collapse: collapse;
+}
+
+/* Estilo para la cabecera */
+.table thead {
+    background-color: rgba(8, 129, 120, 0.4); /* Fondo color más suave y con mayor transparencia */
+    color: #fff; /* Texto blanco */
+}
+
+/* Estilo para las celdas de la cabecera */
+.table th {
+    padding: 14px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    border: 1px solid #ddd; /* Bordes neutros en encabezados */
+    color: #fff; /* Texto blanco */
+    background-color: rgba(8, 129, 120, 0.4); /* Fondo de los encabezados más suave y transparente */
+}
+
+/* Estilo para las celdas del cuerpo */
+.table td {
+    padding: 12px 15px;
+    font-size: 14px;
+    color: #1a1a1a;
+    border-bottom: 1px solid #ddd; /* Bordes neutros en celdas */
+    border-left: 1px solid #ddd; /* Bordes neutros en celdas */
+    background-color: #fff; /* Fondo blanco para las celdas */
+    transition: background-color 0.3s ease;
+}
+
+/* Color alternado para filas pares */
+.table tbody tr:nth-child(even) {
+    background-color: #f0f7f7;
+}
+
+/* Animación en hover para las filas */
+.table tbody tr:hover {
+    background-color: #e8f7f7;
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+/* Animación de entrada para la tabla */
+@keyframes fadeInTable {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Estilo para celdas especiales */
+.table td:last-child {
+    padding: 0;
+}
